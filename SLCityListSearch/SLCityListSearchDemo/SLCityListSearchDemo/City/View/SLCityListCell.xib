@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SLCityListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1D-7z-jnJ">
+                        <rect key="frame" x="28" y="15" width="37" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwE-tR-7ix">
+                        <rect key="frame" x="26" y="43" width="294" height="1"/>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="foN-sq-NTd"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_city_duigou" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-7G-0hD">
+                        <rect key="frame" x="266" y="13" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="DL9-WS-vyg"/>
+                            <constraint firstAttribute="height" constant="17" id="nSt-BO-UdR"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="a1D-7z-jnJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8OS-NY-LLK"/>
+                    <constraint firstAttribute="trailing" secondItem="ZJE-7G-0hD" secondAttribute="trailing" constant="37" id="Sop-vQ-VV0"/>
+                    <constraint firstAttribute="bottom" secondItem="cwE-tR-7ix" secondAttribute="bottom" id="XZb-hU-Npr"/>
+                    <constraint firstItem="cwE-tR-7ix" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="aIa-OQ-Swv"/>
+                    <constraint firstItem="ZJE-7G-0hD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dpa-aH-GdQ"/>
+                    <constraint firstAttribute="trailing" secondItem="cwE-tR-7ix" secondAttribute="trailing" id="eJR-Kw-AbW"/>
+                    <constraint firstItem="a1D-7z-jnJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="28" id="q5f-Yl-CtH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cityNameLabel" destination="a1D-7z-jnJ" id="MOZ-ub-NFE"/>
+                <outlet property="citySelectedImageView" destination="ZJE-7G-0hD" id="gDa-qj-JRm"/>
+            </connections>
+            <point key="canvasLocation" x="62" y="-3"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="product_city_duigou" width="17" height="17"/>
+    </resources>
+</document>

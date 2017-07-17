@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SLCityHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4np-t9-CRJ">
+                    <rect key="frame" x="13" y="0.0" width="362" height="667"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="4np-t9-CRJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="0qB-Fz-iTr"/>
+                <constraint firstAttribute="trailing" secondItem="4np-t9-CRJ" secondAttribute="trailing" id="330-Ck-2yU"/>
+                <constraint firstAttribute="bottom" secondItem="4np-t9-CRJ" secondAttribute="bottom" id="AJt-AH-EWJ"/>
+                <constraint firstItem="4np-t9-CRJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="B6k-NF-Bzu"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="4np-t9-CRJ" id="7AQ-Cr-bhz"/>
+            </connections>
+            <point key="canvasLocation" x="-75" y="49"/>
+        </view>
+    </objects>
+</document>

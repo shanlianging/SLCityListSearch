@@ -1,0 +1,25 @@
+//
+//  SLPrefixHeader.pch
+//  SLCityListSearchDemo
+//
+//  Created by 武传亮 on 2017/6/26.
+//  Copyright © 2017年 武传亮. All rights reserved.
+//
+
+#ifndef SLPrefixHeader_pch
+#define SLPrefixHeader_pch
+
+// 地图
+#import <CoreLocation/CoreLocation.h>
+#import <Masonry.h>
+#import <ReactiveObjC.h>               // RAC
+#import <MJExtension.h>
+
+
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+
+
+
+#endif /* SLPrefixHeader_pch */

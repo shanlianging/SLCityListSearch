@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C6C66981F00F6F700CD6DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66971F00F6F700CD6DAF /* main.m */; };
+		8C6C669B1F00F6F700CD6DAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C669A1F00F6F700CD6DAF /* AppDelegate.m */; };
+		8C6C669E1F00F6F700CD6DAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C669D1F00F6F700CD6DAF /* ViewController.m */; };
+		8C6C66A11F00F6F700CD6DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C669F1F00F6F700CD6DAF /* Main.storyboard */; };
+		8C6C66A31F00F6F700CD6DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C66A21F00F6F700CD6DAF /* Assets.xcassets */; };
+		8C6C66A61F00F6F700CD6DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C66A41F00F6F700CD6DAF /* LaunchScreen.storyboard */; };
+		8C6C66B11F00F6F700CD6DAF /* SLCityListSearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66B01F00F6F700CD6DAF /* SLCityListSearchDemoTests.m */; };
+		8C6C66BC1F00F6F700CD6DAF /* SLCityListSearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66BB1F00F6F700CD6DAF /* SLCityListSearchDemoUITests.m */; };
+		8C6C66E91F00F72300CD6DAF /* SLCityHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66D41F00F72300CD6DAF /* SLCityHeadView.m */; };
+		8C6C66EA1F00F72300CD6DAF /* SLCityHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C66D51F00F72300CD6DAF /* SLCityHeadView.xib */; };
+		8C6C66EB1F00F72300CD6DAF /* SLCityListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66D71F00F72300CD6DAF /* SLCityListCell.m */; };
+		8C6C66EC1F00F72300CD6DAF /* SLCityListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C66D81F00F72300CD6DAF /* SLCityListCell.xib */; };
+		8C6C66ED1F00F72300CD6DAF /* SLCityLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66DA1F00F72300CD6DAF /* SLCityLocationView.m */; };
+		8C6C66EE1F00F72300CD6DAF /* SLHotCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66DC1F00F72300CD6DAF /* SLHotCityCell.m */; };
+		8C6C66EF1F00F72300CD6DAF /* SLHotCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C66DD1F00F72300CD6DAF /* SLHotCityCell.xib */; };
+		8C6C66F81F00F88000CD6DAF /* SLLocationHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66F71F00F88000CD6DAF /* SLLocationHelp.m */; };
+		8C6C66FD1F0108AA00CD6DAF /* SLCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66FC1F0108AA00CD6DAF /* SLCityListViewController.m */; };
+		8C6C67001F010A0700CD6DAF /* SLCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C66FF1F010A0700CD6DAF /* SLCityModel.m */; };
+		8C6C67021F01145500CD6DAF /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C6C67011F01145500CD6DAF /* CityData.plist */; };
+		B11806C4F3C8078AA789C3F3 /* libPods-SLCityListSearchDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AE363616CC2A3CA46A2DFC /* libPods-SLCityListSearchDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C6C66AD1F00F6F700CD6DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C6C668B1F00F6F700CD6DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C6C66921F00F6F700CD6DAF;
+			remoteInfo = SLCityListSearchDemo;
+		};
+		8C6C66B81F00F6F700CD6DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C6C668B1F00F6F700CD6DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C6C66921F00F6F700CD6DAF;
+			remoteInfo = SLCityListSearchDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13AE363616CC2A3CA46A2DFC /* libPods-SLCityListSearchDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLCityListSearchDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6C66931F00F6F700CD6DAF /* SLCityListSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLCityListSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6C66971F00F6F700CD6DAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C6C66991F00F6F700CD6DAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C6C669A1F00F6F700CD6DAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C6C669C1F00F6F700CD6DAF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C6C669D1F00F6F700CD6DAF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C6C66A01F00F6F700CD6DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C6C66A21F00F6F700CD6DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C6C66A51F00F6F700CD6DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C6C66A71F00F6F700CD6DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C6C66AC1F00F6F700CD6DAF /* SLCityListSearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLCityListSearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6C66B01F00F6F700CD6DAF /* SLCityListSearchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLCityListSearchDemoTests.m; sourceTree = "<group>"; };
+		8C6C66B21F00F6F700CD6DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C6C66B71F00F6F700CD6DAF /* SLCityListSearchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLCityListSearchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6C66BB1F00F6F700CD6DAF /* SLCityListSearchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLCityListSearchDemoUITests.m; sourceTree = "<group>"; };
+		8C6C66BD1F00F6F700CD6DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C6C66D31F00F72300CD6DAF /* SLCityHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityHeadView.h; sourceTree = "<group>"; };
+		8C6C66D41F00F72300CD6DAF /* SLCityHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCityHeadView.m; sourceTree = "<group>"; };
+		8C6C66D51F00F72300CD6DAF /* SLCityHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCityHeadView.xib; sourceTree = "<group>"; };
+		8C6C66D61F00F72300CD6DAF /* SLCityListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityListCell.h; sourceTree = "<group>"; };
+		8C6C66D71F00F72300CD6DAF /* SLCityListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCityListCell.m; sourceTree = "<group>"; };
+		8C6C66D81F00F72300CD6DAF /* SLCityListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCityListCell.xib; sourceTree = "<group>"; };
+		8C6C66D91F00F72300CD6DAF /* SLCityLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityLocationView.h; sourceTree = "<group>"; };
+		8C6C66DA1F00F72300CD6DAF /* SLCityLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCityLocationView.m; sourceTree = "<group>"; };
+		8C6C66DB1F00F72300CD6DAF /* SLHotCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHotCityCell.h; sourceTree = "<group>"; };
+		8C6C66DC1F00F72300CD6DAF /* SLHotCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHotCityCell.m; sourceTree = "<group>"; };
+		8C6C66DD1F00F72300CD6DAF /* SLHotCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLHotCityCell.xib; sourceTree = "<group>"; };
+		8C6C66E11F00F72300CD6DAF /* CityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityMacros.h; sourceTree = "<group>"; };
+		8C6C66F61F00F88000CD6DAF /* SLLocationHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLocationHelp.h; sourceTree = "<group>"; };
+		8C6C66F71F00F88000CD6DAF /* SLLocationHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLocationHelp.m; sourceTree = "<group>"; };
+		8C6C66F91F00FA9000CD6DAF /* SLPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPrefixHeader.pch; sourceTree = "<group>"; };
+		8C6C66FA1F00FBCA00CD6DAF /* ViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelProtocol.h; sourceTree = "<group>"; };
+		8C6C66FB1F0108AA00CD6DAF /* SLCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityListViewController.h; sourceTree = "<group>"; };
+		8C6C66FC1F0108AA00CD6DAF /* SLCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCityListViewController.m; sourceTree = "<group>"; };
+		8C6C66FE1F010A0700CD6DAF /* SLCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityModel.h; sourceTree = "<group>"; };
+		8C6C66FF1F010A0700CD6DAF /* SLCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCityModel.m; sourceTree = "<group>"; };
+		8C6C67011F01145500CD6DAF /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
+		AA2252672DD8125F20BCFCDC /* Pods-SLCityListSearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLCityListSearchDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLCityListSearchDemo/Pods-SLCityListSearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C57987660ECA59F30E60AF81 /* Pods-SLCityListSearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLCityListSearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLCityListSearchDemo/Pods-SLCityListSearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C6C66901F00F6F700CD6DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B11806C4F3C8078AA789C3F3 /* libPods-SLCityListSearchDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6C66A91F00F6F700CD6DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6C66B41F00F6F700CD6DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C6C668A1F00F6F700CD6DAF = {
+			isa = PBXGroup;
+			children = (
+				8C6C66951F00F6F700CD6DAF /* SLCityListSearchDemo */,
+				8C6C66AF1F00F6F700CD6DAF /* SLCityListSearchDemoTests */,
+				8C6C66BA1F00F6F700CD6DAF /* SLCityListSearchDemoUITests */,
+				8C6C66941F00F6F700CD6DAF /* Products */,
+				C5E970EDE9D18C6502A5886A /* Pods */,
+				F1A8EA650229A5A8877EB05B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C6C66941F00F6F700CD6DAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66931F00F6F700CD6DAF /* SLCityListSearchDemo.app */,
+				8C6C66AC1F00F6F700CD6DAF /* SLCityListSearchDemoTests.xctest */,
+				8C6C66B71F00F6F700CD6DAF /* SLCityListSearchDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C6C66951F00F6F700CD6DAF /* SLCityListSearchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C67011F01145500CD6DAF /* CityData.plist */,
+				8C6C66F61F00F88000CD6DAF /* SLLocationHelp.h */,
+				8C6C66F71F00F88000CD6DAF /* SLLocationHelp.m */,
+				8C6C66C91F00F72300CD6DAF /* City */,
+				8C6C66991F00F6F700CD6DAF /* AppDelegate.h */,
+				8C6C669A1F00F6F700CD6DAF /* AppDelegate.m */,
+				8C6C669C1F00F6F700CD6DAF /* ViewController.h */,
+				8C6C669D1F00F6F700CD6DAF /* ViewController.m */,
+				8C6C66F91F00FA9000CD6DAF /* SLPrefixHeader.pch */,
+				8C6C66FA1F00FBCA00CD6DAF /* ViewModelProtocol.h */,
+				8C6C669F1F00F6F700CD6DAF /* Main.storyboard */,
+				8C6C66A21F00F6F700CD6DAF /* Assets.xcassets */,
+				8C6C66A41F00F6F700CD6DAF /* LaunchScreen.storyboard */,
+				8C6C66A71F00F6F700CD6DAF /* Info.plist */,
+				8C6C66961F00F6F700CD6DAF /* Supporting Files */,
+			);
+			path = SLCityListSearchDemo;
+			sourceTree = "<group>";
+		};
+		8C6C66961F00F6F700CD6DAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66971F00F6F700CD6DAF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C6C66AF1F00F6F700CD6DAF /* SLCityListSearchDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66B01F00F6F700CD6DAF /* SLCityListSearchDemoTests.m */,
+				8C6C66B21F00F6F700CD6DAF /* Info.plist */,
+			);
+			path = SLCityListSearchDemoTests;
+			sourceTree = "<group>";
+		};
+		8C6C66BA1F00F6F700CD6DAF /* SLCityListSearchDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66BB1F00F6F700CD6DAF /* SLCityListSearchDemoUITests.m */,
+				8C6C66BD1F00F6F700CD6DAF /* Info.plist */,
+			);
+			path = SLCityListSearchDemoUITests;
+			sourceTree = "<group>";
+		};
+		8C6C66C91F00F72300CD6DAF /* City */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66CA1F00F72300CD6DAF /* Controller */,
+				8C6C66CD1F00F72300CD6DAF /* Model */,
+				8C6C66D21F00F72300CD6DAF /* View */,
+				8C6C66E01F00F72300CD6DAF /* ViewModel */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		8C6C66CA1F00F72300CD6DAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66FB1F0108AA00CD6DAF /* SLCityListViewController.h */,
+				8C6C66FC1F0108AA00CD6DAF /* SLCityListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8C6C66CD1F00F72300CD6DAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66FE1F010A0700CD6DAF /* SLCityModel.h */,
+				8C6C66FF1F010A0700CD6DAF /* SLCityModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C6C66D21F00F72300CD6DAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66D31F00F72300CD6DAF /* SLCityHeadView.h */,
+				8C6C66D41F00F72300CD6DAF /* SLCityHeadView.m */,
+				8C6C66D51F00F72300CD6DAF /* SLCityHeadView.xib */,
+				8C6C66D61F00F72300CD6DAF /* SLCityListCell.h */,
+				8C6C66D71F00F72300CD6DAF /* SLCityListCell.m */,
+				8C6C66D81F00F72300CD6DAF /* SLCityListCell.xib */,
+				8C6C66D91F00F72300CD6DAF /* SLCityLocationView.h */,
+				8C6C66DA1F00F72300CD6DAF /* SLCityLocationView.m */,
+				8C6C66DB1F00F72300CD6DAF /* SLHotCityCell.h */,
+				8C6C66DC1F00F72300CD6DAF /* SLHotCityCell.m */,
+				8C6C66DD1F00F72300CD6DAF /* SLHotCityCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C6C66E01F00F72300CD6DAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C6C66E11F00F72300CD6DAF /* CityMacros.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5E970EDE9D18C6502A5886A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA2252672DD8125F20BCFCDC /* Pods-SLCityListSearchDemo.debug.xcconfig */,
+				C57987660ECA59F30E60AF81 /* Pods-SLCityListSearchDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1A8EA650229A5A8877EB05B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13AE363616CC2A3CA46A2DFC /* libPods-SLCityListSearchDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C6C66921F00F6F700CD6DAF /* SLCityListSearchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C6C66C01F00F6F700CD6DAF /* Build configuration list for PBXNativeTarget "SLCityListSearchDemo" */;
+			buildPhases = (
+				DB009D0F6A816B91B4BCEF53 /* [CP] Check Pods Manifest.lock */,
+				8C6C668F1F00F6F700CD6DAF /* Sources */,
+				8C6C66901F00F6F700CD6DAF /* Frameworks */,
+				8C6C66911F00F6F700CD6DAF /* Resources */,
+				19A93010650418865E99322E /* [CP] Embed Pods Frameworks */,
+				FBAC789868524DD5658B7E87 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLCityListSearchDemo;
+			productName = SLCityListSearchDemo;
+			productReference = 8C6C66931F00F6F700CD6DAF /* SLCityListSearchDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C6C66AB1F00F6F700CD6DAF /* SLCityListSearchDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C6C66C31F00F6F700CD6DAF /* Build configuration list for PBXNativeTarget "SLCityListSearchDemoTests" */;
+			buildPhases = (
+				8C6C66A81F00F6F700CD6DAF /* Sources */,
+				8C6C66A91F00F6F700CD6DAF /* Frameworks */,
+				8C6C66AA1F00F6F700CD6DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C6C66AE1F00F6F700CD6DAF /* PBXTargetDependency */,
+			);
+			name = SLCityListSearchDemoTests;
+			productName = SLCityListSearchDemoTests;
+			productReference = 8C6C66AC1F00F6F700CD6DAF /* SLCityListSearchDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C6C66B61F00F6F700CD6DAF /* SLCityListSearchDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C6C66C61F00F6F700CD6DAF /* Build configuration list for PBXNativeTarget "SLCityListSearchDemoUITests" */;
+			buildPhases = (
+				8C6C66B31F00F6F700CD6DAF /* Sources */,
+				8C6C66B41F00F6F700CD6DAF /* Frameworks */,
+				8C6C66B51F00F6F700CD6DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C6C66B91F00F6F700CD6DAF /* PBXTargetDependency */,
+			);
+			name = SLCityListSearchDemoUITests;
+			productName = SLCityListSearchDemoUITests;
+			productReference = 8C6C66B71F00F6F700CD6DAF /* SLCityListSearchDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C6C668B1F00F6F700CD6DAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "武传亮";
+				TargetAttributes = {
+					8C6C66921F00F6F700CD6DAF = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = M4967VCBKG;
+						ProvisioningStyle = Automatic;
+					};
+					8C6C66AB1F00F6F700CD6DAF = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = M4967VCBKG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8C6C66921F00F6F700CD6DAF;
+					};
+					8C6C66B61F00F6F700CD6DAF = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = M4967VCBKG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8C6C66921F00F6F700CD6DAF;
+					};
+				};
+			};
+			buildConfigurationList = 8C6C668E1F00F6F700CD6DAF /* Build configuration list for PBXProject "SLCityListSearchDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C6C668A1F00F6F700CD6DAF;
+			productRefGroup = 8C6C66941F00F6F700CD6DAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C6C66921F00F6F700CD6DAF /* SLCityListSearchDemo */,
+				8C6C66AB1F00F6F700CD6DAF /* SLCityListSearchDemoTests */,
+				8C6C66B61F00F6F700CD6DAF /* SLCityListSearchDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C6C66911F00F6F700CD6DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6C66EA1F00F72300CD6DAF /* SLCityHeadView.xib in Resources */,
+				8C6C67021F01145500CD6DAF /* CityData.plist in Resources */,
+				8C6C66A61F00F6F700CD6DAF /* LaunchScreen.storyboard in Resources */,
+				8C6C66A31F00F6F700CD6DAF /* Assets.xcassets in Resources */,
+				8C6C66EF1F00F72300CD6DAF /* SLHotCityCell.xib in Resources */,
+				8C6C66A11F00F6F700CD6DAF /* Main.storyboard in Resources */,
+				8C6C66EC1F00F72300CD6DAF /* SLCityListCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6C66AA1F00F6F700CD6DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6C66B51F00F6F700CD6DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19A93010650418865E99322E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLCityListSearchDemo/Pods-SLCityListSearchDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB009D0F6A816B91B4BCEF53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBAC789868524DD5658B7E87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLCityListSearchDemo/Pods-SLCityListSearchDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C6C668F1F00F6F700CD6DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6C66F81F00F88000CD6DAF /* SLLocationHelp.m in Sources */,
+				8C6C67001F010A0700CD6DAF /* SLCityModel.m in Sources */,
+				8C6C66EE1F00F72300CD6DAF /* SLHotCityCell.m in Sources */,
+				8C6C669E1F00F6F700CD6DAF /* ViewController.m in Sources */,
+				8C6C66E91F00F72300CD6DAF /* SLCityHeadView.m in Sources */,
+				8C6C66FD1F0108AA00CD6DAF /* SLCityListViewController.m in Sources */,
+				8C6C669B1F00F6F700CD6DAF /* AppDelegate.m in Sources */,
+				8C6C66ED1F00F72300CD6DAF /* SLCityLocationView.m in Sources */,
+				8C6C66981F00F6F700CD6DAF /* main.m in Sources */,
+				8C6C66EB1F00F72300CD6DAF /* SLCityListCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6C66A81F00F6F700CD6DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6C66B11F00F6F700CD6DAF /* SLCityListSearchDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6C66B31F00F6F700CD6DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6C66BC1F00F6F700CD6DAF /* SLCityListSearchDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C6C66AE1F00F6F700CD6DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C6C66921F00F6F700CD6DAF /* SLCityListSearchDemo */;
+			targetProxy = 8C6C66AD1F00F6F700CD6DAF /* PBXContainerItemProxy */;
+		};
+		8C6C66B91F00F6F700CD6DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C6C66921F00F6F700CD6DAF /* SLCityListSearchDemo */;
+			targetProxy = 8C6C66B81F00F6F700CD6DAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C6C669F1F00F6F700CD6DAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6C66A01F00F6F700CD6DAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C6C66A41F00F6F700CD6DAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C6C66A51F00F6F700CD6DAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C6C66BE1F00F6F700CD6DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C6C66BF1F00F6F700CD6DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C6C66C11F00F6F700CD6DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA2252672DD8125F20BCFCDC /* Pods-SLCityListSearchDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M4967VCBKG;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SLCityListSearchDemo/SLPrefixHeader.pch";
+				INFOPLIST_FILE = SLCityListSearchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8C6C66C21F00F6F700CD6DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C57987660ECA59F30E60AF81 /* Pods-SLCityListSearchDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M4967VCBKG;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SLCityListSearchDemo/SLPrefixHeader.pch";
+				INFOPLIST_FILE = SLCityListSearchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8C6C66C41F00F6F700CD6DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M4967VCBKG;
+				INFOPLIST_FILE = SLCityListSearchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLCityListSearchDemo.app/SLCityListSearchDemo";
+			};
+			name = Debug;
+		};
+		8C6C66C51F00F6F700CD6DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M4967VCBKG;
+				INFOPLIST_FILE = SLCityListSearchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLCityListSearchDemo.app/SLCityListSearchDemo";
+			};
+			name = Release;
+		};
+		8C6C66C71F00F6F700CD6DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M4967VCBKG;
+				INFOPLIST_FILE = SLCityListSearchDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SLCityListSearchDemo;
+			};
+			name = Debug;
+		};
+		8C6C66C81F00F6F700CD6DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M4967VCBKG;
+				INFOPLIST_FILE = SLCityListSearchDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SLCityListSearchDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C6C668E1F00F6F700CD6DAF /* Build configuration list for PBXProject "SLCityListSearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C6C66BE1F00F6F700CD6DAF /* Debug */,
+				8C6C66BF1F00F6F700CD6DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C6C66C01F00F6F700CD6DAF /* Build configuration list for PBXNativeTarget "SLCityListSearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C6C66C11F00F6F700CD6DAF /* Debug */,
+				8C6C66C21F00F6F700CD6DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C6C66C31F00F6F700CD6DAF /* Build configuration list for PBXNativeTarget "SLCityListSearchDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C6C66C41F00F6F700CD6DAF /* Debug */,
+				8C6C66C51F00F6F700CD6DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C6C66C61F00F6F700CD6DAF /* Build configuration list for PBXNativeTarget "SLCityListSearchDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C6C66C71F00F6F700CD6DAF /* Debug */,
+				8C6C66C81F00F6F700CD6DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C6C668B1F00F6F700CD6DAF /* Project object */;
+}

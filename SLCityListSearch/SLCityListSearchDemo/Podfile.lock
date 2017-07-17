@@ -1,0 +1,18 @@
+PODS:
+  - Masonry (1.0.2)
+  - MJExtension (3.0.13)
+  - ReactiveObjC (2.1.2)
+
+DEPENDENCIES:
+  - Masonry (~> 1.0.0)
+  - MJExtension (~> 3.0.11)
+  - ReactiveObjC (~> 2.1.2)
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
+
+PODFILE CHECKSUM: 8aa5354b3c7ff6ef6fd4eea23ab05b76fe84bf45
+
+COCOAPODS: 1.2.1
