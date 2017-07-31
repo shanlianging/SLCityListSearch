@@ -35,23 +35,20 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor whiteColor];
         [self setupView];
-        
-        [self locationAction];
         
     }
     return self;
 }
 
-- (void)locationAction {
-    
-  
 
+
+- (void)setLocationCity:(NSString *)locationCity {
+    _locationCity = locationCity;
     
-    
+    [self.cityButton setTitle:locationCity forState:UIControlStateNormal];
 }
-
 
 
 #pragma mark -- 视图

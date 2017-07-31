@@ -19,6 +19,7 @@
 /** 重新定位按钮 */
 @property (strong, nonatomic) UIButton *locationButton;
 
-
+/** 定位城市 */
+@property (strong, nonatomic) NSString *locationCity;
 
 @end

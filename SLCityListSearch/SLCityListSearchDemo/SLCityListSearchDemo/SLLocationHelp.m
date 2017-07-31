@@ -17,6 +17,13 @@
 // 地理编码和反编码
 @property (strong, nonatomic) CLGeocoder *geocoder;
 
+/** 所有定位信息 */
+@property (copy, nonatomic) LocationPlacemark locationPlacemark;
+/** 定位失败 */
+@property (copy, nonatomic) LocationFailed locationFailed;
+/** 定位状态 */
+@property (copy, nonatomic) LocationStatus locationStatus;
+
 @end
 
 @implementation SLLocationHelp
@@ -43,27 +50,6 @@ static id _instance = nil;
     return _instance;
 }
 
--(void)getLocation:(NoLaction)location {
-    
-    [self locationAction];
-    self.location =location;
-    
-}
-
-- (void)getLocationPlacemark:(LocationPlacemark)placemark noLocation:(NoLaction)noLocation {
-    
-    if (placemark) {
-        self.locationPlacemark = placemark;
-    }
-    
-    if (noLocation) {
-        self.noLocation = noLocation;
-    }
-    
-    [self locationAction];
-    
-    
-}
 
 
 - (void)getLocationPlacemark:(LocationPlacemark)placemark status:(LocationStatus)status didFailWithError:(LocationFailed)error {
@@ -81,8 +67,6 @@ static id _instance = nil;
     }
     
     
-    
-    
     [self locationAction];
     
     
@@ -90,14 +74,6 @@ static id _instance = nil;
 
 
 - (void)locationAction {
-    if ([CLLocationManager authorizationStatus] ==kCLAuthorizationStatusDenied) {
-        if (self.noLocation) {
-            self.noLocation();
-        }
-
-        
-        
-    }
     
     // 定位
     self.manager = [CLLocationManager new];
@@ -136,14 +112,6 @@ static id _instance = nil;
     [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         
         CLPlacemark *placeMark = placemarks[0];
-        
-        
-        NSString *locationName = [NSString stringWithFormat:@"%@-%@", placeMark.locality, placeMark.subLocality];
-        
-        if(self.location != nil)
-        {
-            self.location(locationName);
-        }
         
         if (self.locationPlacemark) {
             self.locationPlacemark(placeMark);

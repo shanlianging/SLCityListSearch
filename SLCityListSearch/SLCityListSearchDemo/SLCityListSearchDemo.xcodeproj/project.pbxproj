@@ -610,6 +610,7 @@
 				DEVELOPMENT_TEAM = M4967VCBKG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SLCityListSearchDemo/SLPrefixHeader.pch";
 				INFOPLIST_FILE = SLCityListSearchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -624,6 +625,7 @@
 				DEVELOPMENT_TEAM = M4967VCBKG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SLCityListSearchDemo/SLPrefixHeader.pch";
 				INFOPLIST_FILE = SLCityListSearchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhijie.SLCityListSearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

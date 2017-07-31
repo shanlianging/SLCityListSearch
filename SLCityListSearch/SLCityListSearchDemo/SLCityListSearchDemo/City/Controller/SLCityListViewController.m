@@ -13,7 +13,7 @@
 #import "SLHotCityCell.h"
 #import "CityMacros.h"
 #import "SLCityLocationView.h"
-
+#import "SLLocationHelp.h"
 
 
 
@@ -34,7 +34,8 @@
 @property (strong, nonatomic) SLCityModel *cityModel;
 /** 分区中心动画label */
 @property (strong, nonatomic) UILabel *sectionTitle;
-
+/** 定位城市ID */
+@property (assign, nonatomic) NSInteger Id;
 
 
 @end
@@ -114,17 +115,105 @@
     
     // 添加视图
     [self.view addSubview:self.cityLocationView];
+    // 定位方法
+    [self locationAction:self.cityLocationView];
+    
+    [self.cityLocationView.cityButton addTarget:self action:@selector(locationCitySelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.cityLocationView.locationButton addTarget:self action:@selector(againLocation:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:self.tableView];
 
     // 动画
     [self sectionAnimationView];
-//
-//    
-//    // 选中城市
-//    [self selectdeCity];
-
 
 }
+
+#pragma mark -- 定位
+/// 定位选择
+- (void)locationCitySelected:(UIButton *)button {
+
+    if (_delegate && [_delegate respondsToSelector:@selector(sl_cityListSelectedCity:Id:)]) {
+        
+        [_delegate sl_cityListSelectedCity:button.titleLabel.text Id:self.Id];
+        
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+/// 重新定位
+- (void)againLocation:(UIButton *)button {
+    [self locationAction:self.cityLocationView];
+}
+
+/// 定位
+- (void)locationAction:(SLCityLocationView *)cityLocationView {
+    
+    __weak typeof(self) weakSelf = self;
+    [[SLLocationHelp sharedInstance] getLocationPlacemark:^(CLPlacemark *placemark) {
+        
+        if (placemark.locality) {
+            
+            cityLocationView.cityButton.enabled = YES;
+            cityLocationView.locationCity = placemark.locality;
+            
+            if (weakSelf.Id == 0) {
+                BOOL flag = NO;
+                for (SLCity *city in weakSelf.cityModel.hotCity) {
+                    if ([placemark.locality containsString:city.name]) {
+                        weakSelf.Id = city.Id;
+                        flag = YES;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    for (SLCityList *cityList in weakSelf.cityModel.list) {
+                        for (SLCity *city in cityList.citys) {
+                            if ([placemark.locality containsString:city.name]) {
+                                weakSelf.Id = city.Id;
+                                break;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
+            
+        } else {
+            cityLocationView.cityButton.enabled = NO;
+            cityLocationView.locationCity = @"定位失败";
+        }
+        
+    } status:^(CLAuthorizationStatus status) {
+        
+        if (status != kCLAuthorizationStatusAuthorizedAlways && status != kCLAuthorizationStatusAuthorizedWhenInUse) {
+            //定位不能用
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"允许“城市列表”在您使用该应用时访问您的位置吗？" message:@"是否允许访问您的位置？" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            }];
+            [alertController addAction:cancelAction];
+            [alertController addAction:okAction];
+            [weakSelf presentViewController:alertController animated:YES completion:nil];
+        } else {
+            
+            cityLocationView.locationCity = @"定位中...";
+            cityLocationView.cityButton.enabled = NO;
+        }
+        
+        
+    } didFailWithError:^(NSError *error) {
+        cityLocationView.locationCity = @"定位失败";
+        cityLocationView.cityButton.enabled = NO;
+
+    }];
+    
+}
+
+
 #pragma mark -- 分区中心动画视图添加
 - (void)sectionAnimationView {
     [self.tableView.superview addSubview:self.sectionTitle];
@@ -151,16 +240,14 @@
     if (indexPath.section == 0) {
         SLHotCityCell *hotCell = [tableView dequeueReusableCellWithIdentifier:hotCityCell forIndexPath:indexPath];
         hotCell.cityModel = self.cityModel;
-        
-        @weakify(self)
-        [hotCell.hotCitySubject subscribeNext:^(id  _Nullable x) {
-            @strongify(self)
-            RACTupleUnpack(NSNumber *Id, NSString *name) = x;
+        hotCell.selectedCityBlock = ^(NSString *selectedCity, NSInteger Id) {
             if (_delegate && [_delegate respondsToSelector:@selector(sl_cityListSelectedCity:Id:)]) {
-                [_delegate sl_cityListSelectedCity:name Id:Id.integerValue];
+                [_delegate sl_cityListSelectedCity:selectedCity Id:Id];
             }
             [self dismissViewControllerAnimated:YES completion:nil];
-        }];
+            
+        };
+        
         return hotCell;
     }
     

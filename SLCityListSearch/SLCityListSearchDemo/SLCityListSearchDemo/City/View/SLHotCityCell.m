@@ -52,25 +52,19 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.backgroundColor = [UIColor whiteColor];
         button.layer.borderWidth = 1;
-        button.layer.borderColor = [UIColor redColor].CGColor;
+        button.layer.borderColor = [UIColor blueColor].CGColor;
         button.layer.cornerRadius = 2;
         button.layer.masksToBounds = YES;
         button.titleLabel.font = [UIFont systemFontOfSize:13.0];
         [button setTitle:city.name forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         button.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        
+        button.tag = i;
         if ([city.name isEqualToString:self.cityModel.selectedCity]) {
             [button setTitleColor:kButtonColor forState:UIControlStateNormal];
             button.layer.borderColor = kButtonColor.CGColor;
         }
         
-        @weakify(self)
-        [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-            @strongify(self)
-                        
-             [self.hotCitySubject sendNext:RACTuplePack(@(city.Id), city.name)];
-        }];
         
         if (self.cityModel.hotCity.count > count ) {
 
@@ -83,6 +77,7 @@
             count ++;
             x ++;
         }
+        [button addTarget:self action:@selector(citySelected:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.backView addSubview:button];
         
@@ -93,11 +88,13 @@
     
 }
 
-- (RACSubject *)hotCitySubject {
-    if (!_hotCitySubject) {
-        _hotCitySubject = [RACSubject subject];
+- (void)citySelected:(UIButton *)button {
+    SLCity *city = self.cityModel.hotCity[button.tag - 1];
+    
+    if (self.selectedCityBlock) {
+        self.selectedCityBlock(city.name, city.Id);
     }
-    return _hotCitySubject;
+    
 }
 
 

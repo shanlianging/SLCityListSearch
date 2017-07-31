@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 @class SLCityModel;
 
+
+typedef void(^SelectedCityBlock)(NSString *selectedCity, NSInteger Id);
+
 @interface SLHotCityCell : UITableViewCell
 
-
-/** 热门城市点击 */
-@property (strong, nonatomic) RACSubject *hotCitySubject;
 /** 城市模型 */
 @property (strong, nonatomic) SLCityModel *cityModel;
+/** 城市选择block */
+@property (copy, nonatomic) SelectedCityBlock selectedCityBlock;
 
 
 @end
