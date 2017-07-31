@@ -10,6 +10,7 @@
 #import "SLCityListViewController.h"
 
 @interface ViewController ()<SLCityListViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *cityLable;
 
 @end
 
@@ -38,7 +39,11 @@
 
 - (void)sl_cityListSelectedCity:(NSString *)selectedCity Id:(NSInteger)Id {
     
+    self.cityLable.text = selectedCity;
+    
     NSLog(@"selectedCity: %@, Id: %ld", selectedCity, Id);
+    
+    
     
 }
 

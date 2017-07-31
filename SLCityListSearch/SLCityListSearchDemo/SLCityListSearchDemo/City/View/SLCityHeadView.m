@@ -15,7 +15,6 @@
     
     self.contentView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.6];
     
-    
 }
 
 

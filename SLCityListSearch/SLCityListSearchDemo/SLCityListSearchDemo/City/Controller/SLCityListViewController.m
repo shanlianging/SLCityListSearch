@@ -34,8 +34,6 @@
 /** 区头数组 */
 @property (strong, nonatomic) NSMutableArray *sectionArray;
 
-
-
 /** 城市model */
 @property (strong, nonatomic) SLCityModel *cityModel;
 /** 分区中心动画label */
@@ -56,8 +54,6 @@ static NSString * const cityListCell = @"cityListCell";
 
 
 
-
-
 @implementation SLCityListViewController
 
 #pragma mark -- 懒加载
@@ -65,12 +61,10 @@ static NSString * const cityListCell = @"cityListCell";
 - (NSMutableArray *)sectionArray {
     if (!_sectionArray) {
         _sectionArray = [NSMutableArray new];
-        
         for (SLCityList *cityList in self.cityModel.list) {
             [_sectionArray addObject:cityList.initial];
         }
         [_sectionArray insertObject:@"热门" atIndex:0];
-        
     }
     return _sectionArray;
 }
@@ -158,20 +152,14 @@ static NSString * const cityListCell = @"cityListCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 0) {
-        return 1;
-    }
-    
-    return self.cityModel.list[section - 1].citys.count;
+    return section? self.cityModel.list[section - 1].citys.count: 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
         SLHotCityCell *hotCell = [tableView dequeueReusableCellWithIdentifier:hotCityCell forIndexPath:indexPath];
-        hotCell.locationCity = self.cityModel.selectedCity;
-        hotCell.hotArray = self.cityModel.hotCity;
-        
+        hotCell.cityModel = self.cityModel;
         return hotCell;
     }
     
@@ -183,26 +171,17 @@ static NSString * const cityListCell = @"cityListCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        return self.cityModel.hotCellH;
-    }
-    
-    return 33;
+    return indexPath.section? 33: self.cityModel.hotCellH;
 }
 
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     
     return self.sectionArray;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    if (section == 0) {
-        return 0.;
-    }
-    
-    return 18;
+    return section? 18: 0.;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -216,10 +195,7 @@ static NSString * const cityListCell = @"cityListCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        return;
-    }
-    
+    if (indexPath.section == 0) return;
     
     if (_delegate && [_delegate respondsToSelector:@selector(sl_cityListSelectedCity:Id:)]) {
         
@@ -263,11 +239,7 @@ static NSString * const cityListCell = @"cityListCell";
     UITableView *tableView = (UITableView *)scrollView;
     NSArray *array = [tableView indexPathsForRowsInRect:CGRectMake(0, tableView.contentOffset.y, kScreenWidth, 20)];
     NSIndexPath *indexPath = [NSIndexPath new];
-    if (array.count != 0) {
-        indexPath = array[0];
-    } else {
-        indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    }
+    indexPath = array.count? array[0]: [NSIndexPath indexPathForRow:0 inSection:0];
     
     self.sectionTitle.text = self.sectionArray[indexPath.section];
     

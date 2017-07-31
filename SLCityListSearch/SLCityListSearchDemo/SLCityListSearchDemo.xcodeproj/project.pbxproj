@@ -79,7 +79,6 @@
 		8C6C66F61F00F88000CD6DAF /* SLLocationHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLocationHelp.h; sourceTree = "<group>"; };
 		8C6C66F71F00F88000CD6DAF /* SLLocationHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLocationHelp.m; sourceTree = "<group>"; };
 		8C6C66F91F00FA9000CD6DAF /* SLPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPrefixHeader.pch; sourceTree = "<group>"; };
-		8C6C66FA1F00FBCA00CD6DAF /* ViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelProtocol.h; sourceTree = "<group>"; };
 		8C6C66FB1F0108AA00CD6DAF /* SLCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityListViewController.h; sourceTree = "<group>"; };
 		8C6C66FC1F0108AA00CD6DAF /* SLCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCityListViewController.m; sourceTree = "<group>"; };
 		8C6C66FE1F010A0700CD6DAF /* SLCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCityModel.h; sourceTree = "<group>"; };
@@ -149,7 +148,6 @@
 				8C6C669C1F00F6F700CD6DAF /* ViewController.h */,
 				8C6C669D1F00F6F700CD6DAF /* ViewController.m */,
 				8C6C66F91F00FA9000CD6DAF /* SLPrefixHeader.pch */,
-				8C6C66FA1F00FBCA00CD6DAF /* ViewModelProtocol.h */,
 				8C6C669F1F00F6F700CD6DAF /* Main.storyboard */,
 				8C6C66A21F00F6F700CD6DAF /* Assets.xcassets */,
 				8C6C66A41F00F6F700CD6DAF /* LaunchScreen.storyboard */,

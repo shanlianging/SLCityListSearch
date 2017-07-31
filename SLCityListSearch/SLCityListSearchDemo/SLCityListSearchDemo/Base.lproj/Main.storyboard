@@ -20,9 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sza-oS-87r">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sza-oS-87r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yso-UT-uUd"/>
+                            <constraint firstItem="sza-oS-87r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rUe-43-Yd2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vIF-ka-5vM"/>
+                    <connections>
+                        <outlet property="cityLable" destination="sza-oS-87r" id="XlT-0b-2ff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

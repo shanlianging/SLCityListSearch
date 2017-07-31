@@ -14,7 +14,7 @@
 /** 城市名称 */
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
 
-/** 选择城市对勾 */
+/** 选择城市图片 */
 @property (weak, nonatomic) IBOutlet UIImageView *citySelectedImageView;
 
 @end
@@ -32,21 +32,11 @@
     if (_city != city) {
         _city = city;
         self.cityNameLabel.text = city.name;
-        if (city.isSelected) {
-            self.citySelectedImageView.hidden = NO;
-        } else {
-            self.citySelectedImageView.hidden = YES;
-        }
-        
+        self.citySelectedImageView.hidden = !city.isSelected;
     }
 }
 
 
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

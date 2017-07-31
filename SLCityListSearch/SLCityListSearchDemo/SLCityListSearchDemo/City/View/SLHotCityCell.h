@@ -7,18 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SLCity;
+@class SLCityModel;
 
 @interface SLHotCityCell : UITableViewCell
 
-/** 热门城市数组 */
-@property (strong, nonatomic) NSArray<SLCity *> *hotArray;
 
 /** 热门城市点击 */
 @property (strong, nonatomic) RACSubject *hotCitySubject;
 
-/** 选择城市 */
-@property (strong, nonatomic) NSString *locationCity;
+///** 选择城市 */
+//@property (strong, nonatomic) NSString *locationCity;
+
+/**  */
+@property (strong, nonatomic) SLCityModel *cityModel;
 
 
 @end

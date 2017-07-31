@@ -14,9 +14,6 @@
 /** 标题 */
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-/** 分区 */
-@property (assign, nonatomic) NSInteger section;
-
 
 
 @end
