@@ -7,6 +7,7 @@
 //
 
 #import "SLCityModel.h"
+#import "CityMacros.h"
 
 
 @implementation SLCityModel

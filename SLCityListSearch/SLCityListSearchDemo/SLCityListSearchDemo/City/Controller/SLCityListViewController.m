@@ -20,20 +20,16 @@
 @interface SLCityListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 
-/**  */
+/** 列表视图 */
 @property (strong, nonatomic) UITableView *tableView;
-
 /** 定位视图 */
 @property (strong, nonatomic) SLCityLocationView *cityLocationView;
-
 /** 区头视图 */
 @property (strong, nonatomic) SLCityHeadView *cityHeadView;
 /** 是否开始拖拽 */
 @property (assign, nonatomic, getter=isBegainDrag) BOOL begainDrag;
-
 /** 区头数组 */
 @property (strong, nonatomic) NSMutableArray *sectionArray;
-
 /** 城市model */
 @property (strong, nonatomic) SLCityModel *cityModel;
 /** 分区中心动画label */
@@ -46,11 +42,6 @@
 
 #define kSectionTitleWidth 50
 #define kTimeInterval 1
-
-
-static NSString * const cityHeadView = @"cityHeadView";
-static NSString * const hotCityCell = @"hotCityCell";
-static NSString * const cityListCell = @"cityListCell";
 
 
 
@@ -85,7 +76,7 @@ static NSString * const cityListCell = @"cityListCell";
 
 - (SLCityModel *)cityModel {
     if (!_cityModel) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"CityData.plist" ofType:nil];
+        NSString *path = [[NSBundle mainBundle] pathForResource:kCityData ofType:nil];
         NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:path];
         _cityModel = [SLCityModel mj_objectWithKeyValues:data];
     }
@@ -160,6 +151,16 @@ static NSString * const cityListCell = @"cityListCell";
     if (indexPath.section == 0) {
         SLHotCityCell *hotCell = [tableView dequeueReusableCellWithIdentifier:hotCityCell forIndexPath:indexPath];
         hotCell.cityModel = self.cityModel;
+        
+        @weakify(self)
+        [hotCell.hotCitySubject subscribeNext:^(id  _Nullable x) {
+            @strongify(self)
+            RACTupleUnpack(NSNumber *Id, NSString *name) = x;
+            if (_delegate && [_delegate respondsToSelector:@selector(sl_cityListSelectedCity:Id:)]) {
+                [_delegate sl_cityListSelectedCity:name Id:Id.integerValue];
+            }
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
         return hotCell;
     }
     

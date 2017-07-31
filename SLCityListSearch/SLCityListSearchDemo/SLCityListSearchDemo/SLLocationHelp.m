@@ -94,19 +94,7 @@ static id _instance = nil;
         if (self.noLocation) {
             self.noLocation();
         }
-//        //定位不能用
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"允许“速贷之家”在您使用该应用时访问您的位置吗？" message:@"是否允许访问您的位置？" preferredStyle:UIAlertControllerStyleAlert];
-//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//        }];
-//        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-//        }];
-//        [alertController addAction:cancelAction];
-//        [alertController addAction:okAction];
-//        
-//        SDRootViewController *rootViewController = (SDRootViewController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-//        
-//        [rootViewController presentViewController:alertController animated:YES completion:nil];
+
         
         
     }
@@ -140,8 +128,6 @@ static id _instance = nil;
 
 #pragma mark -- 地理位置代理方法
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-    
-//    [[NSNotificationCenter defaultCenter] postNotificationName:kLocationIsOpen object:nil];
     
     CLLocation *location = locations[0];
     // 通常为了节省电量和资源损耗，在获取到位置以后选择停止定位服务

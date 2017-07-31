@@ -14,11 +14,7 @@
 
 /** 热门城市点击 */
 @property (strong, nonatomic) RACSubject *hotCitySubject;
-
-///** 选择城市 */
-//@property (strong, nonatomic) NSString *locationCity;
-
-/**  */
+/** 城市模型 */
 @property (strong, nonatomic) SLCityModel *cityModel;
 
 

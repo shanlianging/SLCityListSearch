@@ -68,9 +68,7 @@
         @weakify(self)
         [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-            
-//            [self.hotCitySubject sendNext:button.titleLabel.text];
-            
+                        
              [self.hotCitySubject sendNext:RACTuplePack(@(city.Id), city.name)];
         }];
         
@@ -95,7 +93,12 @@
     
 }
 
-
+- (RACSubject *)hotCitySubject {
+    if (!_hotCitySubject) {
+        _hotCitySubject = [RACSubject subject];
+    }
+    return _hotCitySubject;
+}
 
 
 

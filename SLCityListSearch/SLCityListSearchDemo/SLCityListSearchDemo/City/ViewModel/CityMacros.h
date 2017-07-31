@@ -9,7 +9,16 @@
 #ifndef CityMacros_h
 #define CityMacros_h
 
+
+static NSString * const cityHeadView = @"cityHeadView";
+static NSString * const hotCityCell = @"hotCityCell";
+static NSString * const cityListCell = @"cityListCell";
+
 #define kCityData @"CityData.plist"
+
+
+
+
 
 
 
