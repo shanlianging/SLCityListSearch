@@ -11,6 +11,8 @@
 
 @interface ViewController ()<SLCityListViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *cityLable;
+/** 选中城市Id */
+@property (assign, nonatomic) NSInteger Id;
 
 @end
 
@@ -29,7 +31,8 @@
     SLCityListViewController *cityListVC = [SLCityListViewController new];
     
     cityListVC.delegate = self;
-    
+    cityListVC.cityModel.selectedCity = self.cityLable.text;
+    cityListVC.cityModel.selectedCityId = self.Id;
     
     UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:cityListVC];
     
@@ -40,6 +43,7 @@
 - (void)sl_cityListSelectedCity:(NSString *)selectedCity Id:(NSInteger)Id {
     
     self.cityLable.text = selectedCity;
+    self.Id = Id;
     
     NSLog(@"selectedCity: %@, Id: %ld", selectedCity, Id);
     

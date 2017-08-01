@@ -7,7 +7,7 @@
 //
 
 #import "SLCityListViewController.h"
-#import "SLCityModel.h"
+
 #import "SLCityHeadView.h"
 #import "SLCityListCell.h"
 #import "SLHotCityCell.h"
@@ -30,8 +30,6 @@
 @property (assign, nonatomic, getter=isBegainDrag) BOOL begainDrag;
 /** 区头数组 */
 @property (strong, nonatomic) NSMutableArray *sectionArray;
-/** 城市model */
-@property (strong, nonatomic) SLCityModel *cityModel;
 /** 分区中心动画label */
 @property (strong, nonatomic) UILabel *sectionTitle;
 /** 定位城市ID */
@@ -100,7 +98,7 @@
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.sectionIndexBackgroundColor = [[UIColor clearColor] colorWithAlphaComponent:0];
-        _tableView.sectionIndexColor = [UIColor redColor];
+        _tableView.sectionIndexColor = [UIColor blueColor];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SLCityHeadView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:cityHeadView];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SLHotCityCell class]) bundle:nil] forCellReuseIdentifier:hotCityCell];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SLCityListCell class]) bundle:nil] forCellReuseIdentifier:cityListCell];
@@ -112,11 +110,17 @@
 #pragma mark -- 视图加载
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    // 设置navigationBar
+    [self setupNavigationBar];
     
     // 添加视图
     [self.view addSubview:self.cityLocationView];
     // 定位方法
     [self locationAction:self.cityLocationView];
+    
+    
+    
     
     [self.cityLocationView.cityButton addTarget:self action:@selector(locationCitySelected:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -124,9 +128,44 @@
     
     [self.view addSubview:self.tableView];
 
+    // 定位索引图片
+    UIImageView *locationImageView = [UIImageView new];
+    locationImageView.image = [UIImage imageNamed:@"location"];
+    [self.view addSubview:locationImageView];
+    CGFloat centerOffset = self.sectionArray.count * 13 / 2.5;
+    [locationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view).offset(-3.5);
+        make.width.height.mas_equalTo(20);
+        make.centerY.equalTo(self.view.mas_centerY).offset(-centerOffset);
+    }];
     // 动画
     [self sectionAnimationView];
 
+}
+
+#pragma mark -- 设置navigationBar
+- (void)setupNavigationBar {
+    
+    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
+    // 设置标题
+    self.navigationItem.title = self.cityModel.selectedCityId? [NSString stringWithFormat:@"当前选择-%@", self.cityModel.selectedCity]: @"选择城市";
+    [self selectdeCity];
+}
+- (void)selectdeCity {
+    
+    // 遍历选择
+    for (SLCityList *cityList in self.cityModel.list) {
+        for (SLCity *city in cityList.citys) {
+            
+            if (city.Id == self.cityModel.selectedCityId) {
+                city.selected = YES;
+            } else {
+                city.selected = NO;
+            }
+        }
+    }
+    
+    
 }
 
 #pragma mark -- 定位
@@ -240,11 +279,12 @@
     if (indexPath.section == 0) {
         SLHotCityCell *hotCell = [tableView dequeueReusableCellWithIdentifier:hotCityCell forIndexPath:indexPath];
         hotCell.cityModel = self.cityModel;
+        __weak typeof(self) weakSelf = self;
         hotCell.selectedCityBlock = ^(NSString *selectedCity, NSInteger Id) {
-            if (_delegate && [_delegate respondsToSelector:@selector(sl_cityListSelectedCity:Id:)]) {
-                [_delegate sl_cityListSelectedCity:selectedCity Id:Id];
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(sl_cityListSelectedCity:Id:)]) {
+                [weakSelf.delegate sl_cityListSelectedCity:selectedCity Id:Id];
             }
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
             
         };
         
@@ -371,6 +411,8 @@
 }
 
 
-
+- (void)dealloc {
+    
+}
 
 @end

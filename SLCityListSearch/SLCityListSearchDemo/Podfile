@@ -4,7 +4,6 @@ platform :ios, "9.3"
 target “SLCityListSearchDemo” do
     
 pod 'Masonry','~> 1.0.0'
-pod 'ReactiveObjC', '~> 2.1.2'
 pod 'MJExtension', '~> 3.0.11'
 
 end

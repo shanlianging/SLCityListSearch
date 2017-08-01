@@ -127,7 +127,7 @@
         _locationButton = [UIButton new];
         [_locationButton setTitle:@"重新定位" forState:UIControlStateNormal];
         [_locationButton setTitleColor:kButtonColor forState:UIControlStateNormal];
-        [_locationButton setImage:[UIImage imageNamed:@"product_city_reposition"] forState:UIControlStateNormal];
+        [_locationButton setImage:[UIImage imageNamed:@"againLocation"] forState:UIControlStateNormal];
         _locationButton.titleEdgeInsets = UIEdgeInsetsMake(0, 6, 0, 0);
         _locationButton.titleLabel.font = [UIFont systemFontOfSize:13.0];
     }

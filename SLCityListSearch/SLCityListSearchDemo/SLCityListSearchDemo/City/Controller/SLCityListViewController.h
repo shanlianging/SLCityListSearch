@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLCityModel.h"
 
 @protocol SLCityListViewControllerDelegate <NSObject>
 
@@ -15,9 +16,8 @@
 @end
 
 @interface SLCityListViewController : UIViewController
-
-/** 选中城市 */
-@property (strong, nonatomic) NSString *selectedCity;
+/** 城市model */
+@property (strong, nonatomic) SLCityModel *cityModel;
 
 
 /** 代理 */

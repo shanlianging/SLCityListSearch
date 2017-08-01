@@ -52,12 +52,12 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.backgroundColor = [UIColor whiteColor];
         button.layer.borderWidth = 1;
-        button.layer.borderColor = [UIColor blueColor].CGColor;
+        button.layer.borderColor = [UIColor lightGrayColor].CGColor;
         button.layer.cornerRadius = 2;
         button.layer.masksToBounds = YES;
         button.titleLabel.font = [UIFont systemFontOfSize:13.0];
         [button setTitle:city.name forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         button.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         button.tag = i;
         if ([city.name isEqualToString:self.cityModel.selectedCity]) {
